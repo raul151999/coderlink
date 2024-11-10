@@ -1,0 +1,27 @@
+<div class="historial-proyectos-container">
+    <h2>Historial de Proyectos</h2>
+    <div class="back-button-container"> 
+      <button class="btn btn-secondary mb-4" (click)="navigateBack()">Regresar a Perfil</button>
+    </div>
+    <div *ngFor="let proyecto of proyectos" class="card-proyecto">
+      <div class="proyecto-header">
+        <span class="proyecto-nombre">"{{ proyecto.nombre }}"</span>
+        <span [ngClass]="{'activo': proyecto.estado === 'Activo', 'terminado': proyecto.estado === 'Terminado'}">
+          {{ proyecto.estado }}
+        </span>
+        <button class="btn-eliminar" (click)="eliminarProyecto(proyecto.id)">Eliminar</button>
+        <button class="btn-ver" (click)="verProyecto(proyecto.id)">Ver</button>
+      </div>
+      
+      <div class="proyecto-info">
+        <div class="proyecto-fechas">
+          <p>Inicio: {{ proyecto.fechaInicio | date }}</p>
+          <p>Actualizado: {{ proyecto.fechaActualizacion | date }}</p>
+        </div>
+        <p>Completado: {{ proyecto.progreso }}%</p>
+        <div class="progress-bar">
+          <div class="progress" [style.width]="proyecto.progreso + '%'"></div>
+        </div>
+      </div>
+    </div>
+  </div>  

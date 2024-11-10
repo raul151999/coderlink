@@ -1,7 +1,6 @@
 <div class="register-page">
 <div class="register-container">
     <h2>Regístrate como Freelancer</h2>
-    <button class="google-btn" (click)="openGoogleAuth()">Continuar con Google</button>
   
     <form (ngSubmit)="register()" #registerForm="ngForm">
       <div class="input-group">
@@ -15,8 +14,8 @@
       </div>
   
       <div class="input-group">
-        <label for="portfolio">Portafolio</label>
-        <textarea id="portfolio" placeholder="Descripción del portafolio" [(ngModel)]="freelancer.portfolio" name="portfolio" required></textarea>
+        <label for="portfolio">Link para su Portafolio</label>
+        <textarea id="portfolio" placeholder="Https://" [(ngModel)]="freelancer.portfolio" name="portfolio" required></textarea>
       </div>
   
       <div class="input-group">
@@ -31,7 +30,7 @@
   
       <div class="input-group">
         <label for="rate">Tarifa</label>
-        <input type="text" id="rate" placeholder="Tarifa por hora" [(ngModel)]="freelancer.rate" name="rate" required />
+        <input type="number" id="rate" placeholder="Tarifa por hora" [(ngModel)]="freelancer.rate" name="rate" #rate= "ngModel" required min="1" pattern="^[0-9]+$" />
       </div>
   
       <div class="input-group">

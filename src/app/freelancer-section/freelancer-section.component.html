@@ -2,7 +2,6 @@
   <!-- Header -->
   <header class="navbar">
     <div class="logo">
-      <h1>CoderLink</h1>
     </div>
     <div class="search-bar">
       <input type="text" placeholder="Buscar Freelancers" />
@@ -13,11 +12,6 @@
         <option value="highest-rating">Mejor calificación</option>
       </select>
     </div>
-    <nav class="nav-links">
-      <a href="#">Inicio</a>
-      <a href="#">Explorar</a>
-      <a href="#">Proyectos</a>
-    </nav>
   </header>
 
   <!-- Main Content -->
@@ -37,7 +31,7 @@
             <p>{{ freelancer.description }}</p>
             <p class="rating">⭐ {{ freelancer.rating }} ({{ freelancer.reviews }})</p>
             <p class="price">${{ freelancer.hourlyRate }}/h</p>
-            <button class="view-profile-btn" (click)="viewProfile(freelancer)">Ver Perfil</button>
+            <button class="view-profile-btn" (click)="viewProfile()">Ver Perfil</button>
             <button class="favorite-btn">❤️</button>
           </div>
         </div>

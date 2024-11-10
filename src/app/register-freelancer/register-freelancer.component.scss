@@ -1,6 +1,6 @@
 /* Página de registro */
 .register-page {
-  min-height: 100vh; /* Ocupa al menos toda la pantalla */
+  min-height: 130vh; /* Ocupa al menos toda la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,23 +23,6 @@
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
-  }
-
-  .google-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #4285F4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: darken(#4285F4, 10%);
-    }
   }
 
   .input-group {

@@ -49,4 +49,7 @@ export class ProfileCustomerComponent {
     console.log(`Viendo el proyecto con ID: ${projectId}`);
     this.router.navigate(['/view-project'])
   }
+  verproyecto() {
+    this.router.navigate(['/historial-proyectos']);
+  }
 }

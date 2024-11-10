@@ -15,4 +15,7 @@ export class ProfileFreelancerComponent {
     goToHome() {
       this.router.navigate(['/']);
     }
+    verproyecto() {
+      this.router.navigate(['/historial-proyectos']);
+    }
 }

@@ -17,6 +17,8 @@ import { CrearProyectoComponent } from './crear-proyecto/crear-proyecto.componen
 import { ModifyProjectComponent } from './modify-project/modify-project.component';
 import { ViewProjectComponent } from './view-project/view-project.component';
 import { HireDeveloperComponent } from './hire-developer/hire-developer.component';
+import { RevisarPortafoliosFreelancerComponent } from './revisar-portafolios-freelancer/revisar-portafolios-freelancer.component';
+import { HistorialProyectosComponent } from './historial-proyectos/historial-proyectos.component';
 
 
 export const routes: Routes = [
@@ -38,4 +40,6 @@ export const routes: Routes = [
   { path: 'modify-project', component: ModifyProjectComponent},
   { path: 'view-project', component: ViewProjectComponent},
   { path: 'hire-developer', component: HireDeveloperComponent},
+  { path: 'revisar-portafolios-freelancer', component: RevisarPortafoliosFreelancerComponent},
+  { path: 'historial-proyectos', component: HistorialProyectosComponent},
 ];

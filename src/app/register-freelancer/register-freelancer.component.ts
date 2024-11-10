@@ -29,20 +29,24 @@ export class RegisterFreelancerComponent {
   constructor(private router: Router) {}
 
   register() {
-    if (this.freelancer.password === this.freelancer.confirmPassword) {
-      // Lógica para el registro del freelancer
-      console.log('Desarrollador registrado:', this.freelancer);
-      this.showSuccessModal = true;
-    } else {
-      alert('Las contraseñas no coinciden.');
-    }
+    // Validar que la tarifa sea un número entero positivo mayor a 0
+  if (this.freelancer.rate === null || this.freelancer.rate <= 0) {
+    alert('Por favor, ingresa una tarifa válida (mayor a 0).');
+    return;
+  }
+
+  // Validar que las contraseñas coincidan
+  if (this.freelancer.password !== this.freelancer.confirmPassword) {
+    alert('Las contraseñas no coinciden.');
+    return;
+  }
+
+  // Lógica para el registro del freelancer
+  console.log('Desarrollador registrado:', this.freelancer);
+  this.showSuccessModal = true;
   }
   closeModal() {
     this.showSuccessModal = false;
     this.router.navigate(['/login']);
-  }
-  openGoogleAuth() {
-    const googleAuthURL = 'https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=ARpgrqfahPgL75ggfdYMLu8k27GCVDPwO9gSM48fIpyW_5eFhu9xcvJ0WFDZ_yBKLHv6FyAqHptJsg&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1743138878%3A1727373242782840&ddm=0';
-    window.open(googleAuthURL, '_blanck');
   }
 }

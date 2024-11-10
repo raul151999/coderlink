@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor,NgIf,NgClass } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,10 +12,11 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./freelancer-section.component.scss'] // Asegúrate de que sea 'styleUrls', no 'styleUrl'
 })
 export class FreelancerSectionComponent {
-  // Lista de freelancers
+  
+  constructor (private router: Router) {}
   freelancers = [
     {
-      name: 'Nombres y Apellidos',
+      name: 'Juan Herrera Mariños',
       description: 'Pequeña descripción',
       rating: 5.0,
       reviews: 10,
@@ -37,7 +39,8 @@ export class FreelancerSectionComponent {
   }
 
   // Método para ver el perfil del freelancer
-  viewProfile(freelancer: any) {
-    alert(`Ver perfil de: ${freelancer.name}`);
+  viewProfile() {
+    this.router.navigate(['/revisar-portafolios-freelancer']);
+    
   }
 }

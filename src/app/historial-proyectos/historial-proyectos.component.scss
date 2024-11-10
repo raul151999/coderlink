@@ -1,0 +1,100 @@
+.historial-proyectos-container {
+    background-color: #6fa1a4;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    min-height: 100vh;
+  
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .btn-secondary {
+      background-color: #007bff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    
+      &:hover {
+        background-color: darken(#5b9a9a, 10%);
+      }
+    }
+    .back-button-container {
+      text-align: left; 
+      margin-bottom: 20px; 
+    }
+  
+    .card-proyecto {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: #333;
+  
+      .proyecto-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+  
+        .proyecto-nombre {
+          font-weight: bold;
+          color: #2f4f4f;
+        }
+  
+        .activo {
+          color: green;
+        }
+  
+        .terminado {
+          color: red;
+        }
+  
+        .btn-eliminar {
+          background-color: #e74c3c;
+          border: none;
+          padding: 5px 10px;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+  
+        .btn-ver {
+          background-color: #007bff;
+          border: none;
+          padding: 5px 10px;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+  
+      .proyecto-info {
+        .proyecto-fechas {
+          display: flex;
+          justify-content: space-between;
+          color: #666;
+        }
+  
+        .progress-bar {
+          width: 100%;
+          background-color: #ddd;
+          border-radius: 5px;
+          overflow: hidden;
+          margin-top: 10px;
+  
+          .progress {
+            height: 10px;
+            background-color: #3498db;
+            transition: width 0.3s ease;
+          }
+        }
+      }
+    }
+  }  

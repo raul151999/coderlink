@@ -23,6 +23,8 @@ import { ModifyProjectComponent } from '../modify-project/modify-project.compone
 import { ViewProjectComponent } from '../view-project/view-project.component';
 import { HireDeveloperComponent } from '../hire-developer/hire-developer.component';
 import { HeaderComponent } from '../shared/header/header.component';
+import { RevisarPortafoliosFreelancerComponent } from '../revisar-portafolios-freelancer/revisar-portafolios-freelancer.component';
+import { HistorialProyectosComponent } from '../historial-proyectos/historial-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { HeaderComponent } from '../shared/header/header.component';
     ViewProjectComponent,
     HireDeveloperComponent,
     HeaderComponent,
+    RevisarPortafoliosFreelancerComponent,
+    HistorialProyectosComponent,
   ],
   imports: [
     BrowserModule,

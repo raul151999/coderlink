@@ -1,0 +1,21 @@
+<div class="portafolio-container">
+  <h2>Portafolios</h2>
+  <div class="back-button-container"> 
+    <button class="btn btn-secondary mb-4" (click)="navigateBack()">Regresar a Freelancer</button>
+  </div>
+    <div *ngFor="let freelancer of freelancers" class="card">
+      <h3>{{ freelancer.nombre }}</h3>
+      <p>{{ freelancer.descripcion }}</p>
+      <div class="web-section">
+        <label>Web:</label>
+        <div *ngIf="freelancer.web; else noLink">
+            <!-- Mostrar el enlace si está disponible -->
+            <a [href]="freelancer.web" target="_blank" class="link">{{ freelancer.web }}</a>
+            <button *ngIf="freelancer.web" class="button" (click)="openLink(freelancer.web)">Visitar</button>
+          </div>
+          <!-- Mostrar un mensaje si no hay enlace -->
+          <ng-template #noLink><span>No disponible</span></ng-template>
+      </div>
+    </div>
+  </div>
+  
