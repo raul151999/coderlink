@@ -21,9 +21,6 @@
         <option value="pending">Pendiente</option>
       </select>
       
-      <label for="revision">Revisión:</label>
-      <input type="text" id="revision" formControlName="revision" required>
-      
       <label for="categoria">Categoría:</label>
       <input type="text" id="categoria" formControlName="categoria" required>
       
@@ -35,7 +32,20 @@
         <option value="4">4</option>
         <option value="5">5</option>
       </select>
-      
+
+      <label for="tarifa">Tarifa:</label>
+    <input 
+      type="number" 
+      id="tarifa" 
+      formControlName="tarifa" 
+      min="1" 
+      step="0.01" 
+      required>
+    <div *ngIf="proyectoForm.get('tarifa')?.invalid && proyectoForm.get('tarifa')?.touched">
+      <small *ngIf="proyectoForm.get('tarifa')?.errors?.['required']">La tarifa es requerida.</small>
+      <small *ngIf="proyectoForm.get('tarifa')?.errors?.['min']">La tarifa debe ser mayor a 0.</small>
+    </div>
+    
       <button type="submit" class="submit-btn">Crear Proyecto</button>
     </form>
   </div>

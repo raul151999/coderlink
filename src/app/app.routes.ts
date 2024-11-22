@@ -10,8 +10,6 @@ import { ProfileCustomerComponent } from './profile-customer/profile-customer.co
 import { ForgotComponent } from './forgot/forgot.component';
 import { ProjectSectionComponent } from './project-section/project-section.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
-import { ProfileFreelancerVistaCComponent } from './profile-freelancer-vista-c/profile-freelancer-vista-c.component';
-import { ProfileCustomerVistaDComponent } from './profile-customer-vista-d/profile-customer-vista-d.component';
 import { EditProfileCustomerComponent } from './edit-profile-customer/edit-profile-customer.component';
 import { CrearProyectoComponent } from './crear-proyecto/crear-proyecto.component';
 import { ModifyProjectComponent } from './modify-project/modify-project.component';
@@ -19,6 +17,11 @@ import { ViewProjectComponent } from './view-project/view-project.component';
 import { HireDeveloperComponent } from './hire-developer/hire-developer.component';
 import { RevisarPortafoliosFreelancerComponent } from './revisar-portafolios-freelancer/revisar-portafolios-freelancer.component';
 import { HistorialProyectosComponent } from './historial-proyectos/historial-proyectos.component';
+import { VerDesarrolladoresFavoritosComponent } from './ver-desarrolladores-favoritos/ver-desarrolladores-favoritos.component';
+import { HistorialProyectosDeveloperComponent } from './historial-proyectos-developer/historial-proyectos-developer.component';
+import { SolicitarCambiosComponent } from './solicitar-cambios/solicitar-cambios.component';
+import { EditProfileFreelancerComponent } from './edit-profile-freelancer/edit-profile-freelancer.component';
+import { ChangePasswordFreelancerComponent } from './change-password-freelancer/change-password-freelancer.component';
 
 
 export const routes: Routes = [
@@ -33,8 +36,6 @@ export const routes: Routes = [
   { path: 'forgot', component: ForgotComponent},
   { path: 'project-section', component: ProjectSectionComponent},
   { path: 'change-password', component: ChangePasswordComponent},
-  { path: 'profile-freelancer-vista-c', component: ProfileFreelancerVistaCComponent},
-  { path: 'profile-customer-vista-d', component: ProfileCustomerVistaDComponent},
   { path: 'edit-profile-customer', component: EditProfileCustomerComponent},
   { path: 'crear-proyecto', component: CrearProyectoComponent},
   { path: 'modify-project', component: ModifyProjectComponent},
@@ -42,4 +43,9 @@ export const routes: Routes = [
   { path: 'hire-developer', component: HireDeveloperComponent},
   { path: 'revisar-portafolios-freelancer', component: RevisarPortafoliosFreelancerComponent},
   { path: 'historial-proyectos', component: HistorialProyectosComponent},
+  { path: 'ver-desarrolladores-favoritos', component: VerDesarrolladoresFavoritosComponent },
+  { path: 'developer-historial-proyectos', component: HistorialProyectosDeveloperComponent},
+  { path: 'solicitar-cambios', component: SolicitarCambiosComponent},
+  { path: 'edit-profile-freelancer', component: EditProfileFreelancerComponent},
+  { path: 'change-password-freelancer', component: ChangePasswordFreelancerComponent},
 ];

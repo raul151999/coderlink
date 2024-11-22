@@ -49,7 +49,8 @@ form {
 }
 
 /* Estilo de los campos de entrada */
-input[type="text"], textarea, select {
+input[type="text"], textarea, select,
+input[type="number"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -62,6 +63,19 @@ input[type="text"], textarea, select {
 input:focus, textarea:focus, select:focus {
   border-color: #007bff;
   outline: none;
+}
+/*tarea especifica*/
+#tarifa {
+  &.ng-invalid.ng-touched {
+    border-color: red;
+  }
+
+  + div small {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    display: block;
+  }
 }
 
 /* Botón de Crear Proyecto */

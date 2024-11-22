@@ -1,0 +1,30 @@
+<div class="form-container">
+    <h2>Solicitar Cambios en el Proyecto</h2>
+    <p>
+      Si deseas realizar cambios en tu proyecto en curso, por favor completar el siguiente formulario:
+    </p>
+  
+    <form (ngSubmit)="onSubmit()" #changeForm="ngForm">
+      <!-- Descripción de los cambios -->
+      <label for="descripcion" class="form-label">Descripción de los cambios</label>
+      <textarea
+        id="descripcion"
+        name="descripcion"
+        class="form-textarea"
+        [(ngModel)]="descripcion"
+        placeholder="Detalla los cambios que necesites ..."
+        required
+      ></textarea>
+  
+      <!-- Botones -->
+      <div class="button-container">
+        <button type="button" class="btn cancel-btn" (click)="onCancel()">
+          Cancelar Solicitud
+        </button>
+        <button type="submit" class="btn submit-btn" [disabled]="!changeForm.valid">
+          Enviar Solicitud
+        </button>
+      </div>
+    </form>
+  </div>
+  

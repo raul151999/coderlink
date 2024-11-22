@@ -21,7 +21,8 @@ export class FreelancerSectionComponent {
       rating: 5.0,
       reviews: 10,
       hourlyRate: 50,
-      imageUrl: 'assets/profile-placeholder.png'
+      imageUrl: 'assets/profile-placeholder.png',
+      isFavorite: false
     },
     {
       name: 'Nombres y Apellidos',
@@ -29,13 +30,20 @@ export class FreelancerSectionComponent {
       rating: 5.0,
       reviews: 10,
       hourlyRate: 50,
-      imageUrl: 'assets/profile-placeholder.png'
+      imageUrl: 'assets/profile-placeholder.png',
+      isFavorite: false
     }
   ];
 
+  setFavorite(freelancer: any): void {
+    if (!freelancer.isFavorite) {
+      freelancer.isFavorite = true;
+    }
+  }
+
   // Método para manejar el filtrado (ejemplo simple)
   filterFreelancers() {
-    alert('Filtrar freelancers');
+    
   }
 
   // Método para ver el perfil del freelancer

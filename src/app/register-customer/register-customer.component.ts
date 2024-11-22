@@ -15,6 +15,7 @@ export class RegisterCustomerComponent {
   customer = {
     firstName: '',
     lastName: '',
+    username: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -25,6 +26,11 @@ export class RegisterCustomerComponent {
   constructor(private router: Router) {}
 
   register() {
+
+    if (!this.customer.username || this.customer.username.trim() === '') {
+      alert('El nombre de usuario es obligatorio.');
+      return;
+    }
     if (this.customer.password === this.customer.confirmPassword) {
       // Lógica para el registro de clientes
       console.log('Cliente registrado:', this.customer);

@@ -19,9 +19,7 @@ interface Freelancer {
 export class RevisarPortafoliosFreelancerComponent {
   constructor (private router: Router) {}
   freelancers: Freelancer[] = [
-    { nombre: 'Juan Herrera Mariños', descripcion: 'Descripcion de la pagina web brindada', web: '' },
-    { nombre: '', descripcion: 'En esta pagina Implemento mis proyectos de github para ser observadas y analizadas por el cliente para una mejor confiabilidad', web: 'https://github.com/raul151999/front-laboratorio' },
-    { nombre: '', descripcion: 'Descripción de la pagina web brindada', web: '' }
+    { nombre: 'Juan Herrera Mariños', descripcion: 'Descripcion de la pagina web brindada', web: 'https://github.com/raul151999/front-laboratorio' },
   ];
     openLink(url: string): void {
       window.open(url, '_blank');

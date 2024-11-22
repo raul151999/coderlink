@@ -4,13 +4,14 @@
   <div class="profile-customer-container">
     <div class="profile-header">
       <div class="profile-image">
-        <img src="assets/profile-placeholder.png" alt="Profile Picture">
+        <img src="icons/client.jpg" alt="Profile Picture">
       </div>
       <div class="profile-info">
         <h2>{{ customer.name }}</h2>
         <p class="customer-description">{{ customer.description }}</p>
         <button class="edit-profile-btn" (click)="editProfile()">Editar Perfil</button>
         <button class="contact-btn" (click)="verproyecto()">Ver Proyectos</button>
+        <button class="view-favorites-btn" (click)="goToFavorites()">Ver Favoritos</button>
       </div>
     </div>
 

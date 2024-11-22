@@ -1,16 +1,8 @@
 <div class="profile-page">
 <div class="profile-settings-container">
-    <div class="profile-picture-section">
-      <img src="path/to/default-profile-picture.jpg" alt="Foto de perfil" class="profile-picture">
-      <button class="change-photo-btn">Cambiar foto</button>
-    </div>
-  
     <form class="profile-form">
-      <label for="firstName">Nombres:</label>
-      <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" placeholder="Ingrese su nombre" />
-  
-      <label for="lastName">Apellidos:</label>
-      <input type="text" id="lastName" [(ngModel)]="lastName" name="lastName" placeholder="Ingrese sus apellidos" />
+      <label for="nombreusuario">Nombre de usuario:</label>
+      <input type="text" id="nombreusuario" [(ngModel)]="nombreusuario" name="nombreusuario" placeholder="Ingrese su nuevo nombre de usuario" />
   
       <label for="email">Correo:</label>
       <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Ingrese su correo electrónico" />
@@ -21,11 +13,6 @@
          <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="********" />
           <button type="button" class="change-password-btn" (click)="goToChangePassword()">Cambiar Contraseña</button>
             </div>
-
-  
-      <label for="companyName">Nombre de Empresa:</label>
-      <input type="text" id="companyName" [(ngModel)]="companyName" name="companyName" placeholder="Ingrese el nombre de la empresa" />
-  
       <!-- Botones de Guardar y Cancelar -->
       <div class="form-buttons">
         <button type="button" class="cancel-btn" (click)="cancel()">Cancelar</button>

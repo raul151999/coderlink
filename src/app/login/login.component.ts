@@ -29,7 +29,7 @@ export class LoginComponent {
     
     // Lógica para manejar el inicio de sesión
     console.log('Iniciando sesión con:', this.user);
-    this.router.navigate(['/profile-customer']); // Redirige a la página del perfil del cliente
+    this.router.navigate(['/profile-freelancer']); // Redirige a la página del perfil del cliente
 
    // console.log('Iniciando sesion con:', this.user);
     //this.router.navigate(['/profile-freelancer']); // Redirige a la pagina del perfil del desarrollador

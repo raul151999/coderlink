@@ -1,0 +1,80 @@
+/* Página de favoritos */
+.favoritos-container {
+  height: 150vh; /* Ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+  background-color: #7ba6a0; /* Fondo de la página */
+  padding: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho de la página */
+}
+
+/* Estilo para el botón de regreso al perfil */
+.back-to-profile-btn {
+  position: absolute;
+  top: 100px;  /* Ajusta esta propiedad para bajarlo un poco */
+  left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken(#007bff, 10%);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los cuadros de los freelancers */
+.freelancer-card {
+  background-color: #fff; /* Fondo blanco para los contenedores */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px;
+  margin: 10px; /* Márgenes para el espacio entre tarjetas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 750px; /* Ajustamos el tamaño del contenedor */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+
+  /* Botón alineado a la derecha */
+  button {
+    background-color: #e74c3c; /* Color rojo */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px; /* Ancho fijo para el botón */
+    align-self: flex-end; /* Alinea el botón a la derecha */
+    margin-top: 35px; /* Espacio entre el texto y el botón */
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #c0392b; /* Color más oscuro para el hover */
+    }
+  }
+}
+
+/* Responsividad: Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .freelancer-card {
+    width: 90%; /* Contenedor más pequeño en pantallas móviles */
+  }
+
+  button {
+    width: 100%; /* El botón ocupa todo el ancho en pantallas pequeñas */
+  }
+}
+

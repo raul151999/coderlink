@@ -1,0 +1,90 @@
+$form-bg-color: #6fa1a4;
+$form-border-radius: 10px;
+$form-text-color: #212529;
+$btn-primary-color: #0d6efd;
+$btn-secondary-color: #6c757d;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    width: 100vw; /* Ocupa toda la anchura de la pantalla */
+    background-color: $form-bg-color; /* Color de fondo para la página */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container {
+  padding: 30px; /* Reduce el padding si es necesario */
+  border-radius: 0; /* Quitar el borde redondeado */
+  width: 95%; /* Ocupa el 100% del ancho */
+  height: 100%; /* Ocupa el 100% de la altura */
+  box-shadow: none; /* Eliminar la sombra */
+  font-family: Arial, sans-serif;
+  color: $form-text-color;
+
+  h2, p {
+    text-align: center; /* Alinear el texto al centro */
+    color: black;
+  }
+
+  .form-label {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .form-textarea {
+    width: 85%;
+    height: 120px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    resize: none;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    margin: 0 auto;
+
+    &:focus {
+      border-color: $btn-primary-color;
+      outline: none;
+    }
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.cancel-btn {
+        background-color: $btn-secondary-color;
+        color: white;
+
+        &:hover {
+          background-color: darken($btn-secondary-color, 10%);
+        }
+      }
+
+      &.submit-btn {
+        background-color: $btn-primary-color;
+        color: white;
+
+        &:hover {
+          background-color: darken($btn-primary-color, 10%);
+        }
+
+        &:disabled {
+          background-color: lighten($btn-primary-color, 30%);
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

@@ -7,9 +7,9 @@
       <input type="text" placeholder="Buscar Freelancers" />
       <button class="filter-btn" (click)="filterFreelancers()">Filtrar</button>
       <select class="sort-dropdown">
-        <option value="recommended">Recomendado</option>
-        <option value="lowest-price">Precio más bajo</option>
-        <option value="highest-rating">Mejor calificación</option>
+        <option value="skills">Habilidades</option>
+        <option value="Experience">Experiencia</option>
+        <option value="fee">Tarifa</option>
       </select>
     </div>
   </header>
@@ -24,7 +24,7 @@
       <div class="freelancer-list">
         <div class="freelancer-card" *ngFor="let freelancer of freelancers">
           <div class="freelancer-img">
-            <img [src]="freelancer.imageUrl" alt="Freelancer Profile" />
+            <img src="icons/desarrollador2.png" alt="Freelancer Profile" />
           </div>
           <div class="freelancer-info">
             <h3>{{ freelancer.name }}</h3>
@@ -32,7 +32,7 @@
             <p class="rating">⭐ {{ freelancer.rating }} ({{ freelancer.reviews }})</p>
             <p class="price">${{ freelancer.hourlyRate }}/h</p>
             <button class="view-profile-btn" (click)="viewProfile()">Ver Perfil</button>
-            <button class="favorite-btn">❤️</button>
+            <button class="favorite-btn" [ngClass]="{ 'favorited': freelancer.isFavorite }" (click)="setFavorite(freelancer)">❤</button>
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@
     
     <div class="project-info">
       <p *ngIf="project?.title"><strong>Nombre del Proyecto:</strong> {{ project.title }}</p>
+      <p><strong>ID del Proyecto:</strong> {{ project.id }}</p>
       <p><strong>Nombre del Proyecto:</strong> {{ project.name }}</p>
       <p><strong>Descripción:</strong> {{ project.description }}</p>
       <p><strong>Presentación:</strong> {{ project.presentation }}</p>
@@ -15,7 +16,7 @@
     </div>
     
     <div class="project-actions">
-      <button class="edit-btn" (click)="editProject()">Modificar</button>
+      <button class="edit-btn" (click)="editProject()">Solicitar Cambios</button>
       <button class="delete-btn" (click)="deleteProject()">Eliminar</button>
     </div>
   </div>

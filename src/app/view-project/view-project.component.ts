@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router'; // Importar Router
 import { NgIf } from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-view-project',
@@ -20,7 +21,7 @@ export class ViewProjectComponent {
 
   editProject() {
     console.log('Modificando el proyecto:', this.project);
-    this.router.navigate(['/modify-project']); // Redirige a la página de modificación
+    this.router.navigate(['/solicitar-cambios']); // Redirige a la página de modificación
   }
 
   deleteProject() {

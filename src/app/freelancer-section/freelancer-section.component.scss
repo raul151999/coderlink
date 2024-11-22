@@ -164,15 +164,20 @@
         background: none;
         border: none;
         cursor: pointer;
-        font-size: 20px;
-        color: #e74c3c;
+        font-size: 24px;
+        color: transparent; /* Hace que el interior del corazón sea vacío */
+        -webkit-text-stroke: 2px red; /* Borde del corazón */
         margin-top: 10px;
-        transition: transform 0.2s;
+        transition: transform 0.2s, color 0.3s, -webkit-text-stroke 0.3s;
 
         &:hover {
           transform: scale(1.2);
         }
+        &.favorited {
+          color: red; /* Rojo más oscuro para el estado favorito */
+          -webkit-text-stroke: 0; /* Elimina el borde */
       }
     }
   }
+}
 }

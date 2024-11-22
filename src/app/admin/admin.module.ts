@@ -25,6 +25,9 @@ import { HireDeveloperComponent } from '../hire-developer/hire-developer.compone
 import { HeaderComponent } from '../shared/header/header.component';
 import { RevisarPortafoliosFreelancerComponent } from '../revisar-portafolios-freelancer/revisar-portafolios-freelancer.component';
 import { HistorialProyectosComponent } from '../historial-proyectos/historial-proyectos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HistorialProyectosDeveloperComponent } from '../historial-proyectos-developer/historial-proyectos-developer.component';
+import { SolicitarCambiosComponent } from '../solicitar-cambios/solicitar-cambios.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { HistorialProyectosComponent } from '../historial-proyectos/historial-pr
     HeaderComponent,
     RevisarPortafoliosFreelancerComponent,
     HistorialProyectosComponent,
+    ReactiveFormsModule,
+    HistorialProyectosDeveloperComponent,
+    SolicitarCambiosComponent,
   ],
   imports: [
     BrowserModule,

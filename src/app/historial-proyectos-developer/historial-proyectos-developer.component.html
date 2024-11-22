@@ -9,7 +9,11 @@
         <span [ngClass]="{'activo': proyecto.estado === 'Activo', 'terminado': proyecto.estado === 'Terminado'}">
           {{ proyecto.estado }}
         </span>
-        <button class="btn-eliminar" (click)="eliminarProyecto(proyecto.id)">Eliminar</button>
+        <select>
+          <option>Por hacer</option>
+          <option>En proceso</option>
+          <option>Terminado</option>
+        </select>
       </div>
       
       <div class="proyecto-info">

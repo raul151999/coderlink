@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForOf,NgIf } from '@angular/common';
 
-
 @Component({
   selector: 'app-profile-customer',
   standalone:true,
@@ -37,6 +36,11 @@ export class ProfileCustomerComponent {
   editProfile() {
     // Redirige a la página de edición de perfil
     this.router.navigate(['/edit-profile-customer']);
+  }
+
+  goToFavorites() {
+    // Redirige a la ruta correcta de favoritos
+    this.router.navigate(['/ver-desarrolladores-favoritos']); // Asegúrate de que esta ruta esté bien configurada
   }
 
   createProject() {

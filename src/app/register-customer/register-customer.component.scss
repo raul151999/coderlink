@@ -1,10 +1,11 @@
 /* Página de registro */
 .register-page {
-  height: 130vh; /* Ocupa toda la pantalla */
+  min-height: 130vh; /* Ocupa toda la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #6fa1a4; /* Fondo similar al login */
+  overflow-y: auto;
 }
 
 .register-container {
@@ -15,6 +16,8 @@
   width: 100%;
   max-width: 400px;
   text-align: center;
+  margin: 20px; /*agrega un margen para evitar que el contenedor se corte en las esquinas*/
+  box-sizing: border-box;
 
   h2 {
     font-size: 1.8rem;

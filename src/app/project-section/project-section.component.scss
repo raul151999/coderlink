@@ -55,7 +55,7 @@
 
 /* Sidebar de filtros */
 .filter-sidebar {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -99,7 +99,7 @@
 
 .jobs-listing {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   flex-grow: 1;
 }
@@ -108,21 +108,31 @@
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  text-align: left;
 }
 
 .job-card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .job-details {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
 }
 
 .details-btn {

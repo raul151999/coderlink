@@ -12,6 +12,14 @@
         <label for="lastName">Apellido</label>
         <input type="text" id="lastName" placeholder="Apellido" [(ngModel)]="freelancer.lastName" name="lastName" required />
       </div>
+
+      <div class="input-group">
+        <label for="username">Nombre de Usuario</label>
+        <input type="text" id="username" placeholder="Nombre de Usuario" [(ngModel)]="freelancer.username" name="username" #username="ngModel" required/>
+        <div *ngIf="username.invalid && username.touched" class="error-message">
+          El nombre de usuario es obligatorio.
+        </div>
+      </div>
   
       <div class="input-group">
         <label for="portfolio">Link para su Portafolio</label>
@@ -20,17 +28,38 @@
   
       <div class="input-group">
         <label for="skills">Habilidades</label>
-        <input type="text" id="skills" placeholder="Habilidades" [(ngModel)]="freelancer.skills" name="skills" required />
+        <div *ngFor="let skill of freelancer.skills; let i = index" class="skill-item">
+          <input
+            type="text"
+            id="skills-{{ i }}"
+            placeholder="Habilidad"
+            [(ngModel)]="freelancer.skills[i]"
+            name="skill-{{ i }}"
+            required
+          />
+          <button
+        type="button"
+        class="remove-btn"
+        (click)="removeSkill(i)"
+        *ngIf="freelancer.skills.length > 1" >-</button>
+        </div>
+        <button type="button" class="add-btn" (click)="addSkill()">+</button>
       </div>
   
       <div class="input-group">
         <label for="experience">Experiencia Laboral</label>
-        <textarea id="experience" placeholder="Descripción de experiencia laboral" [(ngModel)]="freelancer.experience" name="experience" required></textarea>
+        <textarea id="experience" placeholder="Descripción de experiencia laboral" [(ngModel)]="freelancer.experience" name="experience" (ngModelChange)="validateExperienceLength()" required></textarea>
+        <div *ngIf="experienceError" class="error-message">
+            Maximo 150 caracteres permitido
+        </div>
       </div>
   
       <div class="input-group">
         <label for="rate">Tarifa</label>
         <input type="number" id="rate" placeholder="Tarifa por hora" [(ngModel)]="freelancer.rate" name="rate" #rate= "ngModel" required min="1" pattern="^[0-9]+$" />
+        <div *ngIf="rate.invalid && rate.touched" class="error-message">
+            Porfavor, ingresa una tarifa valida mayor a 0.
+        </div>
       </div>
   
       <div class="input-group">

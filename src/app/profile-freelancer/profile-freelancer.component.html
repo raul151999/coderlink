@@ -5,7 +5,7 @@
     <div class="profile-header">
       <div class="profile-image">
         <!-- Imagen de perfil -->
-        <img src="path/to/profile-image.jpg" alt="Imagen de perfil" />
+        <img src="icons/desarrollador2.png" alt="Imagen de perfil" />
       </div>
       <div class="profile-info">
         <h2>Nombres y Apellidos</h2>
@@ -15,27 +15,31 @@
           <span>⭐ 5.6 (10)</span>
           <span class="hourly-rate">$50/h</span>
         </div>
-        <button class="edit-btn">Editar Perfil</button>
+        <button class="edit-btn" (click)="editarperfil()">Editar Perfil</button>
         <button class="contact-btn" (click)="verproyecto()">Ver Proyectos</button>
-
       </div>
     </div>
-  
     <div class="portfolio">
       <h3>Portafolio</h3>
-      <input type="text" placeholder="Añadir URL ..." />
+      <div class="portfolio-link">
+        <!-- Mostrar el enlace del portafolio o un mensaje si no está disponible -->
+        <a *ngIf="portfolioLink; else noPortfolio" [href]="portfolioLink" target="_blank" rel="noopener noreferrer">
+          {{ portfolioLink }}
+        </a>
+        <ng-template #noPortfolio>
+          <p>No se ha añadido un portafolio aún.</p>
+        </ng-template>
+      </div>
     </div>
   
     <div class="skills">
       <h3>Habilidades</h3>
       <div class="tags">
-        <span class="tag">Diseño de sitios web</span>
-        <span class="tag">Desarrollo Frontend</span>
-        <span class="tag">CSS y JavaScript</span>
-        <span class="tag">HTML5</span>
-        <span class="tag">Responsive Design</span>
-        <span class="tag">React</span>
+        <span class="tag" *ngFor="let skill of skills">
+          {{ skill }}
+        </span>
       </div>
+      <p *ngIf="skills.length === 0">No se han añadido habilidades aún.</p>
     </div>
   </div>
   
