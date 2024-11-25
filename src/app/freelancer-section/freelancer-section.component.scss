@@ -67,6 +67,47 @@
   }
 }
 
+/* Sidebar de filtros */
+.filter-sidebar {
+  background-color: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.filter-sidebar h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.filter-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-category li {
+  margin-bottom: 10px;
+}
+
+.apply-filters-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.apply-filters-btn:hover {
+  background-color: #0056b3;
+}
+
 /* Main Content */
 .main-content {
   display: flex;
@@ -89,7 +130,7 @@
   }
 
   .freelancer-list {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
   }

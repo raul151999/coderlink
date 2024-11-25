@@ -5,14 +5,26 @@
     </div>
     <div class="search-bar">
       <input type="text" placeholder="Buscar Freelancers" />
-      <button class="filter-btn" (click)="filterFreelancers()">Filtrar</button>
-      <select class="sort-dropdown">
-        <option value="skills">Habilidades</option>
-        <option value="Experience">Experiencia</option>
-        <option value="fee">Tarifa</option>
-      </select>
+      <button class="filter-btn" (click)="filterFreelancers()">Buscar</button>
     </div>
   </header>
+
+  <div class="main-content">
+    <aside class="filter-sidebar">
+      <h3>Filtrar por:</h3>
+      <div class="filter-category">
+        <h4>Habilidades</h4>
+        <ul>
+          <li><input type="checkbox" /> Java</li>
+          <li><input type="checkbox" /> C++</li>
+          <li><input type="checkbox" /> C#</li>
+          <li><input type="checkbox" /> Python</li>
+          <li><input type="checkbox" /> html</li>
+          <li><input type="checkbox" /> JavaScript</li>
+          </ul>
+      </div>
+      <button class="apply-filters-btn">Aplicar Filtros</button>
+      </aside>
 
   <!-- Main Content -->
   <div class="main-content">
@@ -38,4 +50,3 @@
       </div>
     </section>
   </div>
-</div>
